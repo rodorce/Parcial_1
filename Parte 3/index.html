@@ -29,8 +29,18 @@ Crea una funcion llamada: challenge1  que realice lo siguiente:
 
 **/
 
-// CREA TU FUNCION challenge1 aqui 
 
+// CREA TU FUNCION challenge1 aqui 
+function challenge1(){
+    let answer = prompt("¿Cuántos botones necesita?")
+    let dummy = document.querySelector('#dummy');
+    for(let i = 0; i < answer; i++){
+        var btn = document.createElement('button');
+        btn.innerHTML = nombres[i];
+        dummy.appendChild(btn);
+    }
+
+}
 
 
 // ************** PARTE 2    **************
@@ -41,7 +51,13 @@ Crea una funcion llamada: challenge2 que utilizando un FOR convierta todos los n
 **/
 
 // CREA TU FUNCION challenge2 2 aquí.
+function challenge2(){
+    for(let i = 0; i < nombres.length; i++){
+        nombres[i] = nombres[i].toUpperCase();
+    }
 
+    alert(nombres)
+}
 
 
 // ************** PARTE 3    **************
@@ -67,7 +83,21 @@ Deberia escribir en consola la concatenación de nombre + color + raza para el o
 Invoca la función para validar su funcionalidad.
 
 */
+function Dog(nombre, color, raza) {
+  this.nombre = nombre;
+  this.color = color;
+  this.raza = raza;
+}
 
+function challenge3(){
+    var golden = new Dog('Skipper', 'negro', 'golden retriever');
+    var husky = new Dog('Rocky', 'negro', 'husky');
+    var corgi = new Dog('Firulais', 'blanco', 'corgi');
+
+    console.log(golden)
+    console.log(husky)
+    console.log(corgi)
+}
 
 
 
